@@ -42,17 +42,18 @@ var qFiveBtnTwo = document.createElement('button')
 var qFiveBtnThree = document.createElement('button')
 var qFiveBtnFour = document.createElement('button')
 
-
+// final function in the series which will log the users score into
 function finalScore() {
     
     submitBtn.addEventListener('click', function(e){
         e.preventDefault()
         saveLastScore()
+       starter()
     })
 
     function saveLastScore() {
     var testScores = {
-        name: nameInput.value,
+        name: input.value,
         score: score,
     }
     localStorage.setItem(tester, JSON.stringify(testScores))
@@ -71,7 +72,7 @@ function finalScore() {
     div.appendChild(submitBtn)
     timer = 0
 }
-
+// my series of questions that each trigger the next one in line until its hits the end and resets.
 function qFive() {
     h1El.textContent = "Boolean statements return what data?"
         qFiveBtnOne.textContent = "True or False"
@@ -242,8 +243,15 @@ function qOne() {
     })
 }
 
+// function that starts the program, also removes the text from final function to appear reset
+function starter() {
+    startBtn.textContent = "Start Game!"
+    h1El.textContent = "Test Your Knowledge!"
+    body.appendChild(h1El)
+    h1El.appendChild(startBtn)
+     
+}
 function timerHandler() {
-    timer = 60
     var timerInterval = setInterval(function(){
         timer--
         timerContainer.textContent = timer
@@ -253,24 +261,19 @@ function timerHandler() {
         }
     }, 1000)
 }
+// removes 10 seconds from your remaining time if you select wrong answer
 function timerPenalty(){
-    timer = timer - 5
+    timer = timer - 10
 }
-
+//  adds 10 points to your score if you select a correct answer
 function scoreFun() {
     score = (score + 10)
-    // scoreKeeper.innerText = score 
 }
-function starter() {
-    startBtn.textContent = "Start Game!"
-    body.appendChild(startBtn)
-        
-
-
+// listens for click to begin timer and qOne function, doesnt seem to reset score to 0 if you keep cycling.
     startBtn.addEventListener('click', function() {
         timerHandler()
         qOne()
         score = 0
     } )
-}
+
 starter()
