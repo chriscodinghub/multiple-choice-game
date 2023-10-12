@@ -34,24 +34,20 @@ My name is Chris Davis and this is my Multiple-Choice Game!
 
 ## Images showcasing features on my app
 
+![multiple-choice-home](https://github.com/chriscodinghub/multiple-choice-game/assets/144561170/1265e8f8-3e4c-4904-9ba3-8f903c66f8d9)
+
+<br>
+
+![multiple-choice-question](https://github.com/chriscodinghub/multiple-choice-game/assets/144561170/81ce554f-00fb-4c68-843b-e68b2bfb252e)
 
 
 <br>
 
+![multiple-choice-score](https://github.com/chriscodinghub/multiple-choice-game/assets/144561170/b6ac7d94-6d10-4c6a-a921-574384701fe3)
 
 
-<br>
+## Date
 
-
-
-<br>
-
-
-
-<br>
-
-
-
-<br>
+10/12/2023
 
 
