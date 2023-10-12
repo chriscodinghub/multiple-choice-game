@@ -246,7 +246,7 @@ function qOne() {
 // function that starts the program, also removes the text from final function to appear reset
 function starter() {
     startBtn.textContent = "Start Game!"
-    h1El.textContent = "Test Your Knowledge!"
+    h1El.textContent = "Test Your Knowledge!  "
     body.appendChild(h1El)
     h1El.appendChild(startBtn)
      
